@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+{% include 'header.html.twig' %}
+  <ul>
+    <li><a href="{{ home }}">Home</a></li>
+  </ul>
+
+{% block main %}
+<h1>Members</h1>
+
+<ul>
+    {% for user in users %}
+        <li>{{ user.name|upper }} on {{ user.age}} aastat vana ja ta elukoht on {{user.location}}</li>
+    {% endfor %}
+</ul>
+{% endblock main %}
